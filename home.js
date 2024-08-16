@@ -22,9 +22,7 @@ form.addEventListener('submit',async(event)=>{
     rendercard()
     try {
         const docRef = await addDoc(collection(db, "users"), {
-          first: "Ada",
-          last: "Lovelace",
-          born: 1815
+          input : input.value
         });
         console.log("Document written with ID: ", docRef.id);
       } catch (e) {
