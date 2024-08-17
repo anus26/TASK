@@ -24,9 +24,10 @@ form.addEventListener('submit',async(event)=>{
       });
       try {
         const docRef = await addDoc(collection(db, "users"), {
-          first: "Ada",
-          last: "Lovelace",
-          born: 1815
+         username: username.value,
+         email :   email.value,
+         password : password.value
+         
         });
         console.log("Document written with ID: ", docRef.id);
       } catch (e) {
